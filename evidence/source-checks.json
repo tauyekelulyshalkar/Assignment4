@@ -1,0 +1,38 @@
+[
+  {
+    "file": "index.html",
+    "sha256": "da68e255a8b98231bcfe34fb2a584b9536b8ec636984f466967047bc58639da8",
+    "unique_ids": true,
+    "all_controls_have_names": true,
+    "all_controls_have_connected_labels": true,
+    "script_count": 0,
+    "forbidden_attribute_count": 0
+  },
+  {
+    "file": "task1.html",
+    "sha256": "f8e4942bb8abb64f5fe9c70c57567cfa4c812455bc73fd3e35bcb8e9acc395d6",
+    "unique_ids": true,
+    "all_controls_have_names": true,
+    "all_controls_have_connected_labels": true,
+    "script_count": 0,
+    "forbidden_attribute_count": 0
+  },
+  {
+    "file": "task2.html",
+    "sha256": "8a4ce0742e55c4cef7d65da287d4f6593c2661f2e5427064709784ba01e49744",
+    "unique_ids": true,
+    "all_controls_have_names": true,
+    "all_controls_have_connected_labels": true,
+    "script_count": 0,
+    "forbidden_attribute_count": 0
+  },
+  {
+    "file": "task3.html",
+    "sha256": "964b9487f48c999d3edcd715d587357bd6416137cc1a05b4d24d7b57bc5f1d65",
+    "unique_ids": true,
+    "all_controls_have_names": true,
+    "all_controls_have_connected_labels": true,
+    "script_count": 0,
+    "forbidden_attribute_count": 0
+  }
+]

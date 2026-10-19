@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment 4 forms by Shalkar Tauyekeluly, IT-2510.">
+  <title>Reserve a table | Assignment 4</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="general-page">
+  <main class="container py-4 py-md-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <article class="application-card cafe-card">
+          <header class="application-header">
+            <p class="eyebrow">THE DAILY CUP</p>
+            <h1>Reserve a table</h1>
+            <p>A place for good coffee and good company.</p>
+          </header>
+          <form class="application-form validation-form" action="#" method="post">
+            <p class="required-note">Fields marked * are required. This is a practice form; no booking is stored.</p>
+            <div class="row g-4">
+              <div class="col-12">
+                <label class="form-label" for="guest-name">Your name *</label>
+                <input class="form-control" type="text" id="guest-name" name="guest_name" autocomplete="name" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="guest-email">Email *</label>
+                <input class="form-control" type="email" id="guest-email" name="email" autocomplete="email" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="guest-phone">Phone *</label>
+                <input class="form-control" type="tel" id="guest-phone" name="phone" autocomplete="tel" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="guests">Guests *</label>
+                <input class="form-control" type="number" id="guests" name="guests" min="1" step="1" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="reservation-date">Date *</label>
+                <input class="form-control" type="date" id="reservation-date" name="date" required>
+              </div>
+              <fieldset class="col-12">
+                <legend class="form-label">Seating *</legend>
+                <div class="d-flex flex-wrap gap-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" id="seating-inside" name="seating" value="inside" required>
+                    <label class="form-check-label" for="seating-inside">Inside</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" id="seating-terrace" name="seating" value="terrace" required>
+                    <label class="form-check-label" for="seating-terrace">Terrace</label>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="col-12">
+                <label class="form-label" for="meal">Meal *</label>
+                <select class="form-select" id="meal" name="meal" required>
+                  <option value="">Choose a meal</option>
+                  <option value="lunch">Lunch</option>
+                  <option value="dinner">Dinner</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="comments">Comments (optional)</label>
+                <textarea class="form-control" id="comments" name="comments" rows="3" aria-describedby="comments-help"></textarea>
+                <div class="form-text" id="comments-help">Let us know about any seating preferences.</div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="terms" name="terms" value="accepted" required>
+                  <label class="form-check-label" for="terms">I agree to the terms *</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-brand w-100" type="submit">Reserve</button>
+              </div>
+            </div>
+          </form>
+        </article>
+      </div>
+    </div>
+  </main>
+  <nav class="task-links" aria-label="Assignment pages">
+    <a href="index.html">All tasks</a>
+    <a href="task1.html">Train ticket</a>
+    <a href="task2.html">Hackathon</a>
+    <a href="task3.html">Café reservation</a>
+  </nav>
+</body>
+</html>

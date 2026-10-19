@@ -1,0 +1,86 @@
+/* Bootstrap is loaded first. All custom rules are here. */
+@font-face { font-family: "Montserrat"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/montserrat-400.ttf") format("truetype"); }
+@font-face { font-family: "Montserrat"; font-style: normal; font-weight: 500; font-display: swap; src: url("assets/fonts/montserrat-500.ttf") format("truetype"); }
+@font-face { font-family: "Montserrat"; font-style: normal; font-weight: 600; font-display: swap; src: url("assets/fonts/montserrat-600.ttf") format("truetype"); }
+@font-face { font-family: "Montserrat"; font-style: normal; font-weight: 700; font-display: swap; src: url("assets/fonts/montserrat-700.ttf") format("truetype"); }
+:root {
+  --green: #0F6B5F;
+  --gold: #F2A93B;
+  --ink: #16302B;
+  --soft: #F4F7F5;
+  --mist: #E6EFEC;
+  --error: #b42318;
+}
+body { font-family: "Montserrat", sans-serif; color: var(--ink); background: var(--soft); }
+h1, h2 { font-weight: 700; }
+h1 { font-size: clamp(1.55rem, 2.5vw, 2.15rem); }
+h2 { font-size: 1.3rem; }
+fieldset { min-inline-size: 0; }
+.form-label { font-size: .94rem; font-weight: 600; margin-bottom: .5rem; }
+legend.form-label { float: none; width: auto; }
+.form-control, .form-select { background-color: var(--soft); border-color: #ceddd7; border-radius: .7rem; color: var(--ink); padding: .65rem .8rem; }
+.form-control:focus, .form-select:focus { background-color: #fff; border-color: var(--green); box-shadow: 0 0 0 .2rem rgb(15 107 95 / 15%); }
+.form-check-input:checked { background-color: var(--green); border-color: var(--green); }
+.form-check-input:focus { border-color: var(--green); box-shadow: 0 0 0 .2rem rgb(15 107 95 / 20%); }
+.form-check-label { cursor: pointer; }
+a { color: var(--green); text-underline-offset: .2em; }
+:focus-visible { outline: .18rem solid var(--green); outline-offset: .2rem; }
+.task-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem 1.4rem; padding: 1.3rem 1rem 2rem; font-size: .85rem; }
+.train-page { background: var(--mist); }
+.train-layout { padding: clamp(.75rem, 3vw, 2rem); }
+.train-card { overflow: hidden; background: #fff; border-radius: 1.7rem; box-shadow: 0 1.5rem 2.6rem rgb(22 48 43 / 15%); }
+.train-header { background: var(--green); color: #fff; padding: 1.65rem 2.5rem; }
+.train-header h1 { margin: 0; font-size: clamp(1.25rem, 2.8vw, 2rem); }
+.train-form { padding: 2.8rem 3.2rem; }
+.trip-options { display: inline-flex; margin: 0 0 1.6rem; border: 0; padding: 0; }
+.trip-choice { display: grid; }
+.trip-choice input, .trip-choice label { grid-area: 1 / 1; }
+.trip-choice input { appearance: none; width: 100%; height: 100%; margin: 0; border: 0; border-radius: 2rem; }
+.trip-choice label { padding: .65rem 1.4rem; border: 1px solid var(--green); color: var(--green); cursor: pointer; font-weight: 600; font-size: .9rem; }
+.trip-choice:first-child label { border-radius: 2rem 0 0 2rem; }
+.trip-choice:last-child label { border-radius: 0 2rem 2rem 0; border-left: 0; }
+.trip-choice input:checked + label { background: var(--green); color: #fff; }
+.trip-choice input:focus-visible + label { outline: .2rem solid var(--gold); outline-offset: .2rem; }
+.form-floating > .form-control { min-height: 4rem; height: auto; }
+.form-floating > label { color: #5f706a; }
+.train-form .form-floating > .form-control ~ label::after { background-color: transparent; }
+.input-group-text { color: #fff; background: var(--green); border-color: var(--green); font-weight: 600; border-radius: .7rem; }
+.btn { border-radius: 2rem; padding: .75rem 1.6rem; font-weight: 700; }
+.btn-clear { border: 1px solid var(--ink); color: var(--ink); background: #fff; }
+.btn-clear:hover { background: var(--mist); border-color: var(--ink); }
+.btn-find { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.btn-find:hover { background: #e5992b; color: var(--ink); border-color: #e5992b; }
+.application-card { background: #fff; border: 1px solid #d9e4df; border-radius: 1.35rem; overflow: hidden; box-shadow: 0 1rem 2.5rem rgb(22 48 43 / 7%); }
+.application-header { padding: 2rem 2.25rem; background: var(--green); color: #fff; }
+.application-header p:last-child { margin: .65rem 0 0; }
+.eyebrow { font-size: .75rem; letter-spacing: .13em; font-weight: 700; margin-bottom: .65rem; }
+.application-form { padding: 2rem 2.25rem; }
+.required-note { font-size: .85rem; color: #536760; margin-bottom: 1.75rem; }
+.form-text { font-size: .78rem; color: #566961; }
+.btn-brand { color: #fff; background: var(--green); border-color: var(--green); }
+.btn-brand:hover { color: #fff; background: #095247; border-color: #095247; }
+.home-card { background: #fff; border: 1px solid #d9e4df; border-radius: 1.2rem; padding: 2rem; }
+.cafe-card .application-header { background: #493d32; }
+.cafe-card .btn-brand { background: #493d32; border-color: #493d32; }
+/* No :invalid selector: untouched fields have no red errors on page load. */
+.validation-form .form-control:user-invalid,
+.validation-form .form-select:user-invalid,
+.validation-form .form-check-input:user-invalid { border-color: var(--error); }
+.validation-form .form-control:user-valid,
+.validation-form .form-select:user-valid { border-color: var(--green); }
+.validation-form input:user-invalid ~ .invalid-feedback,
+.validation-form select:user-invalid ~ .invalid-feedback,
+.validation-form textarea:user-invalid ~ .invalid-feedback,
+.experience-group:has(input:user-invalid) > .invalid-feedback { display: block; }
+.invalid-feedback { color: var(--error); font-size: .8rem; }
+@media (max-width: 767.98px) {
+  .train-card { border-radius: 1.2rem; }
+  .train-header { padding: 1.25rem 1.35rem; }
+  .train-form { padding: 1.5rem 1.35rem; }
+  .trip-options { display: flex; }
+  .trip-choice { flex: 1; text-align: center; }
+  .trip-choice label { padding: .6rem .5rem; font-size: .8rem; }
+  .train-form .form-check-label { font-size: .85rem; }
+  .train-actions .btn { width: 100%; }
+  .application-header, .application-form { padding: 1.5rem 1.2rem; }
+}
